@@ -1,0 +1,340 @@
+@import 'variables','fonts','icons','mixins';
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1{
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+p{
+    margin-top: 2rem;
+    line-height: 1.7rem;
+}
+
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #fff;
+    margin: 20px 20px 20px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-3 a {
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    transition: all .45s ease-Out;
+    &:hover{
+        text-decoration: none;
+    }
+  }
+  
+  #circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+  }
+  
+  #button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+  
+  #button-3:hover a {
+    color: #2D3142;
+  }
+  
+  
+  
+header{
+    &#navbar{
+        background-color: #fff;
+        position: fixed;
+        top: -95px;
+        width: 100%;
+        display: block;
+        transition: top 0.3s;
+        z-index: 99;
+        @include box-shadow;
+    }
+    .site-logo {
+        .brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    
+    .main-menu{
+        height: 100%;
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+        a {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            padding: 8px 0;
+            color: #000;
+            text-decoration: none;
+            &:hover {
+                color: #0366d6;
+                text-decoration: none;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #0366d6;
+                    transition: opacity .3s ease, width .3s ease;
+                    right: 0;
+                    left: 0;
+                    pointer-events: none
+                }
+                &:after {
+                    background: transparent;
+                    width: 100%;
+                    transition: 0s;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                bottom: -2px;
+                background: #000;
+                left: 0;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                margin: 0 auto;
+                width: 0;
+                height: 2px;
+                background-color: #0366d6;
+                transition: opacity .3s ease, width .3s ease;
+                right: 0;
+                left: 0;
+                pointer-events: none;
+                margin-top: 8px;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+section#hero{
+    .main-banner{
+        width: 100%;
+        background-image: url(../assets/image/resume-banner.jpg);
+        background-color: #005bc1;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 50vw auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        .my-intro{
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: #0366d6;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            padding: 80px 40px 60px 40px;
+        }
+    }
+}
+
+section#aboutMe{
+    .about-info{
+        display: flex;
+        align-items: center;
+        padding: 0 3rem 0 0;
+        h2{
+            color: #0366d6;
+        }
+    }
+
+    .my-portrait{
+        padding: 8rem 0 6rem;
+        img{
+            padding: 0.9rem;
+            border: 1px solid #b4b4b4;
+        }
+    }
+    
+}
+
+section#skillsContainer{
+    background-color: #f5f4fb;
+    padding: 4rem 0;
+    h2{
+        color: #0366d6;
+    }
+
+    
+    .mySkills{
+        padding: 6rem 0 0;
+        
+        .serviceContainer{
+            padding-right: 7rem;
+            h5{
+                font-weight: 700;
+                color: #484848;
+            }
+            span{
+                font-size: 14px;
+                color: #767196
+            }
+        }
+    }
+    i{
+        font-size: 50px;
+        color: #484848;
+    }
+}
+
+section#portfolio{
+    padding: 8rem 0;
+    h2{
+        color: #0366d6;
+    }
+    span{
+        color: #929292;
+    }
+    .portfolioItems{
+        padding: 4rem 0 0;
+        .project-tile{
+            p{
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.9rem;
+            }
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px){
+
+    .container {
+        max-width: 1170px;
+    }
+
+}
+
+@media (min-width: 960px){
+
+    
+
+}
+
+@media (min-width: 961px){
+
+    .site-logo {
+        padding-top: 20px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+    }
+
+    .site-logo {
+        img {
+            max-width: 165px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

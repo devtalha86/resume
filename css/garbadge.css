@@ -1,0 +1,186 @@
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#fff;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+
+
+
+figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px auto;
+	max-width: 578px;
+	/*Got rid of float and added max-width along with margin to prevent background bleed that made it look off center*/
+	max-height: 398px;
+	height: auto;
+	cursor: pointer;
+  }
+  
+  figure img {
+	position: relative;
+	display: block;
+	opacity: 0.9;
+  }
+  
+  figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  figure figcaption::before,
+  figure figcaption::after {
+	pointer-events: none;
+  }
+  
+  figure figcaption,
+  figure figcaption > a {
+	/*Provides positioning for the slide up of the caption*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+  /* Anchor will cover the whole item by default */
+  
+  /* For some effects it will show as a button */
+  
+  figure figcaption > a {
+	/*Hides View More Text from view in links*/
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+  }
+  
+ 
+  figure h2,
+  figure p {
+	margin: 0;
+  }
+  
+  figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+  }
+  
+  figure.effect-portfolio {
+	background: #0366d6;
+  }
+  
+  figure.effect-portfolio img,
+  figure.effect-portfolio h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+  }
+  
+  figure.effect-portfolio img {
+	backface-visibility: hidden;
+  }
+  
+  figure.effect-portfolio h2,
+  figure.effect-portfolio p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px 30px;
+  }
+  
+  figure.effect-portfolio p {
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: translate3d(0, 70px, 0);
+  }
+  
+  figure.effect-portfolio:hover img {
+	-webkit-transform: translate3d(0, -80px, 0);
+	transform: translate3d(0, -80px, 0);
+  }
+  
+  figure.effect-portfolio:hover h2 {
+	-webkit-transform: translate3d(0, -100px, 0);
+	transform: translate3d(0, -100px, 0);
+  }
+  
+  figure.effect-portfolio:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+  }
