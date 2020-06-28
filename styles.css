@@ -807,10 +807,19 @@ header#navbar {
   z-index: 99;
   box-shadow: 0px 5px 20px -15px #575757; }
 
-header .site-logo .brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+header .site-logo {
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px; }
+  header .site-logo img {
+    max-width: 165px;
+    top: 4px;
+    position: relative; }
+  header .site-logo .brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
 header .main-menu {
   height: 100%; }
@@ -914,7 +923,7 @@ section#hero .main-banner {
 section#aboutMe .about-info {
   display: flex;
   align-items: center;
-  padding: 0 3rem 0 0; }
+  padding-right: 3rem; }
   section#aboutMe .about-info h2 {
     color: #0366d6; }
 
@@ -932,7 +941,7 @@ section#skillsContainer {
   section#skillsContainer .mySkills {
     padding: 6rem 0 0; }
     section#skillsContainer .mySkills .serviceContainer {
-      padding-right: 7rem; }
+      padding-right: 5rem; }
       section#skillsContainer .mySkills .serviceContainer h5 {
         font-weight: 700;
         color: #484848; }
@@ -1517,16 +1526,7 @@ footer {
 */
 @media (min-width: 1281px) {
   .container {
-    max-width: 1170px; }
-  .site-logo {
-    padding-top: 20px;
-    padding-right: 0px;
-    padding-bottom: 20px;
-    padding-left: 0px; }
-    .site-logo img {
-      max-width: 165px;
-      top: 4px;
-      position: relative; } }
+    max-width: 1170px; } }
 
 /* 
     ##Device = Laptops, Desktops
@@ -1558,6 +1558,8 @@ footer {
     position: fixed;
     top: -65px;
     transition: top 0.3s; }
+    header#mobile-navbar .site-logo {
+      padding: 0; }
     header#mobile-navbar .button_container {
       position: relative;
       float: right;
@@ -1680,7 +1682,11 @@ footer {
       position: relative;
       z-index: 0; }
   section#hero .main-banner .my-intro {
-    height: 100vh; }
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px 0 40px; }
     section#hero .main-banner .my-intro h4 {
       font-size: 1.2rem; }
   h1 {
