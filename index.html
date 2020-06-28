@@ -460,10 +460,15 @@
                                             <textarea placeholder="Message" rows="1" required></textarea>
                                         </div>
                                     </div>
-                                    <div class="button" id="button-3">
-                                        <div id="circle"></div>
-                                        <a href="#">Send Message</a>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="button" id="button-3">
+                                                <div id="circle"></div>
+                                                <a href="#">Send Message</a>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </form>
                             </div>
                         </div>
@@ -476,7 +481,9 @@
 
         </main>
 
-        
+
+        <!-- Back to top button -->
+        <a href="#" id="scroll" style="display: none;"><span></span></a>
 
         <footer id="why" class="new_footer_area bg_color">
             <div class="new_footer_top">
@@ -521,6 +528,8 @@
             </div>
         </footer>
 
+        
+
 
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -539,11 +548,11 @@
                 window.onscroll = function() {
                 var currentScrollPos = window.pageYOffset;
                 if (prevScrollpos > currentScrollPos) {
-                    document.getElementById("mobile-navbar").style.top = "0";
+                    document.getElementById("mobile-navbar").style.top = "-65px";
                 }
                 
                 else {
-                    document.getElementById("mobile-navbar").style.top = "-65px";
+                    document.getElementById("mobile-navbar").style.top = "0";
                 }
 
                
@@ -553,7 +562,7 @@
                     document.getElementById("navbar").style.top = "0";
                 } else {
                     document.getElementById("navbar").style.top = "-95px";
-                    document.getElementById("mobile-navbar").style.top = "-65px";
+                    // document.getElementById("mobile-navbar").style.top = "-65px";
                 }
 
                 prevScrollpos = currentScrollPos;
@@ -638,7 +647,17 @@
                 $('#overlay').toggleClass('open');
             });
 
-
+            $(window).scroll(function(){ 
+                if ($(this).scrollTop() > 200) { 
+                    $('#scroll').fadeIn(); 
+                } else { 
+                    $('#scroll').fadeOut(); 
+                } 
+            }); 
+            $('#scroll').click(function(){ 
+                $("html, body").animate({ scrollTop: 0 }, 600); 
+                return false; 
+            }); 
             
             
 

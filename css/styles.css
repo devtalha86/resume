@@ -747,7 +747,7 @@ p {
   height: 40px;
   width: 150px;
   border: 2px solid #fff;
-  margin: 20px 20px 20px 0;
+  margin: 20px 0 0 0;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -1520,6 +1520,36 @@ footer {
   footer .f_size_18 {
     font-size: 18px; }
 
+#scroll {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 9;
+  background-color: #3498db;
+  text-indent: -9999px;
+  display: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px; }
+  #scroll:hover {
+    background-color: #e74c3c;
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)"; }
+  #scroll span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #ffffff; }
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -1566,6 +1596,7 @@ footer {
       top: 15px;
       right: 0;
       width: 30px;
+      height: 20px;
       cursor: pointer;
       z-index: 100;
       transition: opacity .25s ease; }
@@ -1686,11 +1717,15 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 40px 0 40px; }
+    padding: 0 2rem; }
+    section#hero .main-banner .my-intro h1 {
+      font-size: 2.3rem;
+      line-height: 1.1; }
     section#hero .main-banner .my-intro h4 {
       font-size: 1.2rem; }
-  h1 {
-    font-size: 2.5rem; }
+    section#hero .main-banner .my-intro p {
+      margin-top: 0.8rem;
+      font-size: 0.9rem; }
   h2 {
     font-size: 28px; }
   section#contact {
@@ -1703,10 +1738,12 @@ footer {
         font-size: 0.9rem; }
     section#contact .contactDetails .contactForm {
       padding: 4rem 2rem 4rem; }
+      section#contact .contactDetails .contactForm h6 {
+        text-align: center; }
       section#contact .contactDetails .contactForm input {
         padding-top: 2rem; }
   section#aboutMe {
-    padding: 3rem 0; }
+    padding: 0 0 3rem 0; }
     section#aboutMe .about-info {
       padding: 4rem 2rem 0;
       text-align: center; }
@@ -1735,10 +1772,15 @@ footer {
         font-size: 12px;
         line-height: 1.6rem; }
     footer h3 {
-      font-size: 1.1rem; }
+      font-size: 1rem; }
     footer .rightCandidate ul {
       padding: 0; }
       footer .rightCandidate ul li {
         list-style-type: none; }
         footer .rightCandidate ul li a {
-          font-size: 12px; } }
+          font-size: 12px; }
+    footer .new_footer_top .footer_bg .footer_bg_one {
+      animation: myfirst 5s linear infinite;
+      display: none; }
+    footer .new_footer_top .footer_bg .footer_bg_two {
+      animation: myfirst 8.5s linear infinite; } }
