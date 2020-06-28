@@ -18,12 +18,12 @@
     </head>
 
     <body>
-        <header id="navbar">
+        <header id="navbar" class="d-none d-lg-block d-sm-none">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 p-0">
                         <div class="site-logo">
-                            <a class="brand" href="/" title="John Doe - Web Developer" aria-label="Sujon Mir"><img src="assets/image/resume-logo.png" alt=""></a>
+                            <a class="brand" href="/" title="John Doe - Web Developer"><img src="assets/image/resume-logo.png" alt=""></a>
                         </div>
                     </div>
 
@@ -31,11 +31,13 @@
                         <div class="main-menu">
                             <nav>
                                 <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Me</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Blog</a></li>
+                                    <li><a href="#hero">Home</a></li>
+                                    <li><a href="#aboutMe">About Me</a></li>
+                                    <li><a href="#skillsContainer">Skills</a></li>
+                                    
+                                    <li><a href="#portfolio">Portfolio</a></li>
+                                    <li><a href="#testimonial">Testimonial</a></li>
+                                    <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -44,22 +46,55 @@
             </div>
         </header>
 
+        <header id="mobile-navbar" class="d-sm-block d-md-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="site-logo">
+                            <a class="brand" href="/" title="John Doe - Web Developer"><img class="img-fluid" src="assets/image/resume-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="button_container" id="mobileMenu--toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+                        <div class="overlay" id="overlay">
+                            <nav class="overlay-menu">
+                                <ul>
+                                    <li><a href="#hero">Home</a></li>
+                                    <li><a href="#aboutMe">About Me</a></li>
+                                    <li><a href="#skillsContainer">Skills</a></li>
+                                    
+                                    <li><a href="#portfolio">Portfolio</a></li>
+                                    <li><a href="#testimonial">Testimonial</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#why">Why Me?</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
         <main>
             <section id="hero">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 p-0">
                             <div class="main-banner">
-                                <div class="row">
-                                    <div class="col-lg-5"></div>
-                                    <div class="col-lg-7">
+                                <div class="row m-0">
+                                    <div class="col-12 col-lg-5 d-none d-lg-block d-sm-none"></div>
+                                    
+                                    <div class="col-12 col-lg-7 p-0">
                                         <div class="my-intro">
                                             <h4>Hi, I am John Doe</h4>
                                             <h1>I am a freelancer <br>Web Developer</h1>
                                             <p>I found it easy to get WP clients so that’s why I spent too many times focused on it but I’m also working with Laravel and Lumen. I have skills in PHP and Python too.</p>
                                             <div class="button" id="button-3">
                                                 <div id="circle"></div>
-                                                <a href="#">Let's Go!</a>
+                                                <a href="#contact">Contact me</a>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -96,7 +131,7 @@
             </section>
 
             <section id="skillsContainer">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h2>My Skills</h2>
@@ -104,32 +139,32 @@
                         </div>
                     </div>
                     <div class="mySkills">
-                        <div class="row">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-4 serviceContainer">
-                                <div class="row mb-4 pt-2">
-                                    <div class="col-lg-2 text-center">
+                        <div class="row justify-content-md-center">
+                            
+                            <div class="col-12 col-lg-6 serviceContainer">
+                                <div class="row mb-4 pt-3 mx-0">
+                                    <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-paint-brush"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
                                         <h5>Beautiful Design</h5>
                                         <span>Website is beautiful, unique and tailored to suit your needs and requirements.</span>
                                     </div>
                                 </div>
-                                <div class="row mb-4 pt-3">
-                                    <div class="col-lg-2 text-center">
+                                <div class="row mb-4 pt-3 mx-0">
+                                    <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-code"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
                                         <h5>Clean Code</h5>
                                         <span>Codes are written in HTML5 / CSS3 & JavaScript (jQuery). Cross browser compatible.</span>
                                     </div>
                                 </div>
-                                <div class="row mb-4 pt-3">
-                                    <div class="col-lg-2 text-center">
+                                <div class="row mb-4 pt-3 mx-0">
+                                    <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-tablet"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
                                         <h5>Always Responsive</h5>
                                         <span>Try to make websites completely responsive. They will look great on desktop, tablets and mobile phones too.</span>
                                     </div>
@@ -137,7 +172,7 @@
                             </div>
 
     
-                            <div class="col-lg-4">
+                            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
     
                                 <div class="skillbar clearfix " data-percent="70%">
                                     <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
@@ -182,7 +217,7 @@
                                 </div> <!-- End Skill Bar -->
     
                             </div>
-                            <div class="col-lg-2"></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -374,31 +409,31 @@
                     </div>
                     <div class="row contactDetails">
 
-                        <div class="col-lg-6 p-0">
+                        <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
                             <div class="contactInfo">
-                                <div class="row pb-5">
-                                    <div class="col-lg-2 text-right pt-1">
+                                <div class="row pb-4 pb-lg-5">
+                                    <div class="col-lg-2 text-lg-right text-center pt-1">
                                         <i class="fa fa-map-marker"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-10 text-lg-left text-center mt-lg-0 mt-4">
                                         <h3>Address:</h3>
                                         <p>45 BC, Hampden-Sydney College in Virginia</p>
                                     </div>
                                 </div>
-                                <div class="row pb-5">
-                                    <div class="col-lg-2 text-right pt-1">
+                                <div class="row pb-4 pb-lg-5">
+                                    <div class="col-lg-2 text-lg-right text-center pt-1">
                                         <i class="fa fa-phone"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-10 text-lg-left text-center mt-lg-0 mt-4">
                                         <h3>Phone:</h3>
                                         <p>+123 456 789 000</p>
                                     </div>
                                 </div>
-                                <div class="row pb-5">
-                                    <div class="col-lg-2 text-right pt-1">
+                                <div class="row pb-4 pb-lg-5">
+                                    <div class="col-lg-2 text-lg-right text-center pt-1">
                                         <i class="fa fa-paper-plane"></i>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-10 text-lg-left text-center mt-lg-0 mt-4">
                                         <h3>Email:</h3>
                                         <p>info@pippra.com</p>
                                     </div>
@@ -407,16 +442,16 @@
                             </div>
                         </div>
                         
-                        <div style="background-color: rgba(245, 244, 251, 0.5);" class="col-lg-6 p-0">
+                        <div style="background-color: rgba(245, 244, 251, 0.5);" class="col-12 col-lg-6 p-0 order-1 order-lg-2">
                             <div class="contactForm">
                                 <h6>NEED HELP WITH YOUR PROJECT?</h6>
                                 
                                 <form>
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-12 col-lg-6">
                                             <input placeholder="Name" type="text"  value="" required>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-12 col-lg-6">
                                             <input placeholder="Email address" type="email" onblur="this.setAttribute('value', this.value);" value="" required>
                                             <span class="validation-text">Please enter a valid email address.</span>
                                         </div>
@@ -444,25 +479,20 @@
 
         
 
-        <footer class="new_footer_area bg_color">
+        <footer id="why" class="new_footer_area bg_color">
             <div class="new_footer_top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9 pl-0">
-                            <div class="rightCandidate">
+                        <div class="col-lg-9 px-4 px-lg-0 text-center text-lg-left">
+                            <div class="rightCandidate pr-lg-5">
                                 <h3>How am I the right one for your job?</h3>
-                                <ul>
-                                    <li><a href="#">I will hear from you about your business and prepare your site accordingly</a></li>
-                                    <li><a href="#">The important thing about a website on an eCommerce website is its functionality. I keep a close watch on all functions</a></li>
-                                    <li><a href="#">In the words, Seeing is believing. I promise to make your website attractive</a></li>
-                                    <li><a href="#">I know how important it is for your site to be SEO friendly. When I create the site, I pay close attention to it</a></li>
-                                    <li><a href="#">Until I find myself contented, I continue to work to make it even better</a></li>
-                                    <li><a href="#">I will teach you how to control an eCommerce site</a></li>
-                                </ul>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                                </p>
                             </div>
                         </div>
                         
-                        <div class="col-lg-3 pl-3 pr-0">
+                        <div class="col-lg-3 px-0 pl-lg-3 mt-5 mt-lg-0 text-center text-lg-left">
                             <div>
                                 <h3>Lets Connect</h3>
                                 <div class="f_social_icon mt-4">
@@ -503,27 +533,109 @@
 
         $(document).ready(function () {
 
-            // When the user scrolls down 300px from the top of the document, slide down the navbar
-            window.onscroll = function() {scrollFunction()};
-            
-            function scrollFunction() {
+
+
+            // Mobile menu show/hide on scroll
+            var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("mobile-navbar").style.top = "0";
+                } else {
+                    document.getElementById("mobile-navbar").style.top = "-65px";
+                }
+
+                // For Desktop: When the user scrolls down 300px from the top of the document, slide down the navbar
                 if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
                 document.getElementById("navbar").style.top = "0";
                 } else {
                 document.getElementById("navbar").style.top = "-95px";
                 }
-            }
+
+                prevScrollpos = currentScrollPos;
+
+                
+                }
+
+                
+
 
             
 
-        jQuery(document).ready(function(){
-            jQuery('.skillbar').each(function(){
-                jQuery(this).find('.skillbar-bar').animate({
-                    width:jQuery(this).attr('data-percent')
-                },6000);
-            });
-        });
+            
 
+            
+
+           
+
+
+             // Active menu on scroll 
+              // Cache selectors
+              var lastId,
+                topMenu = $("#navbar, #mobile-navbar"),
+                topMenuHeight = topMenu.outerHeight()+15,
+                // All list items
+                menuItems = topMenu.find("li a"),
+                // Anchors corresponding to menu items
+                scrollItems = menuItems.map(function(){
+                  var item = $($(this).attr("href"));
+                  if (item.length) { return item; }
+                });
+
+                // Bind click handler to menu items
+                // so we can get a fancy scroll animation
+                menuItems.click(function(e){
+                var href = $(this).attr("href"),
+                    offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+                $('html, body').stop().animate({ 
+                    scrollTop: offsetTop
+                }, 800);
+                e.preventDefault();
+                });
+
+                // Bind to scroll
+                $(window).scroll(function(){
+                // Get container scroll position
+                var fromTop = $(this).scrollTop()+topMenuHeight;
+                
+                // Get id of current scroll item
+                var cur = scrollItems.map(function(){
+                    if ($(this).offset().top < fromTop)
+                    return this;
+                });
+                // Get the id of the current element
+                cur = cur[cur.length-1];
+                var id = cur && cur.length ? cur[0].id : "";
+                
+                if (lastId !== id) {
+                    lastId = id;
+                    // Set/remove active class
+                    menuItems
+                        .removeClass("active")
+                        .filter("[href='#"+id+"']").addClass("active");
+                }                   
+                });
+
+            
+
+            jQuery(document).ready(function(){
+                jQuery('.skillbar').each(function(){
+                    jQuery(this).find('.skillbar-bar').animate({
+                        width:jQuery(this).attr('data-percent')
+                    },6000);
+                });
+            });
+
+
+
+            $('#mobileMenu--toggle, .overlay-menu ul li a').click(function() {
+                
+                $('#mobileMenu--toggle').toggleClass('active');
+                $('#overlay').toggleClass('open');
+            });
+
+
+            
             
 
         });
