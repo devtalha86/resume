@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/styles.css">
 
-        <link rel="stylesheet" href="css/garbadge.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         
@@ -51,7 +50,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="site-logo">
-                            <a class="brand" href="/" title="John Doe - Web Developer"><img class="img-fluid" src="assets/image/resume-logo.png" alt=""></a>
+                            <a class="brand" href="/" title="John Doe - Web Developer"><img src="assets/image/resume-logo.png" alt=""></a>
                         </div>
                     </div>
                     
@@ -109,7 +108,7 @@
             <section id="aboutMe">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 about-info">
+                        <div class="col-lg-6 about-info pl-lg-0">
                             <div>
                                 <h6>Section Overline</h6>
                                 <h2>About Me</h2>
@@ -146,7 +145,7 @@
                                     <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-paint-brush"></i>
                                     </div>
-                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0 pl-md-3">
                                         <h5>Beautiful Design</h5>
                                         <span>Website is beautiful, unique and tailored to suit your needs and requirements.</span>
                                     </div>
@@ -155,7 +154,7 @@
                                     <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-code"></i>
                                     </div>
-                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0 pl-md-3">
                                         <h5>Clean Code</h5>
                                         <span>Codes are written in HTML5 / CSS3 & JavaScript (jQuery). Cross browser compatible.</span>
                                     </div>
@@ -164,7 +163,7 @@
                                     <div class="col-12 col-lg-2 text-center text-lg-left px-0">
                                         <i class="fa fa-4x fa-tablet"></i>
                                     </div>
-                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0">
+                                    <div class="col-12 col-lg-10 text-lg-left text-center mt-lg-0 mt-4 px-0 pl-md-3">
                                         <h5>Always Responsive</h5>
                                         <span>Try to make websites completely responsive. They will look great on desktop, tablets and mobile phones too.</span>
                                     </div>
@@ -541,21 +540,26 @@
                 var currentScrollPos = window.pageYOffset;
                 if (prevScrollpos > currentScrollPos) {
                     document.getElementById("mobile-navbar").style.top = "0";
-                } else {
+                }
+                
+                else {
                     document.getElementById("mobile-navbar").style.top = "-65px";
                 }
 
+               
+
                 // For Desktop: When the user scrolls down 300px from the top of the document, slide down the navbar
-                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                document.getElementById("navbar").style.top = "0";
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("navbar").style.top = "0";
                 } else {
-                document.getElementById("navbar").style.top = "-95px";
+                    document.getElementById("navbar").style.top = "-95px";
+                    document.getElementById("mobile-navbar").style.top = "-65px";
                 }
 
                 prevScrollpos = currentScrollPos;
 
                 
-                }
+            }
 
                 
 
