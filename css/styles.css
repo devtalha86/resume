@@ -874,6 +874,24 @@ header .main-menu {
       left: 0;
       pointer-events: none;
       margin-top: 8px; }
+  header .main-menu a.active {
+    color: #0366d6; }
+    header .main-menu a.active:before {
+      position: absolute;
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 2px;
+      background-color: #0366d6;
+      transition: opacity .3s ease, width .3s ease;
+      right: 0;
+      left: 0;
+      pointer-events: none; }
+    header .main-menu a.active:after {
+      background: transparent;
+      width: 100%;
+      transition: 0s; }
 
 section#hero .main-banner {
   width: 100%;
@@ -1151,7 +1169,7 @@ section#contact {
     padding: 4rem 0 0; }
     section#contact .contactDetails .contactInfo {
       background-color: #0366d6;
-      padding: 4rem 1rem 1rem; }
+      padding: 4rem 1rem 0.2rem; }
       section#contact .contactDetails .contactInfo i {
         font-size: 35px;
         color: #fff; }
@@ -1163,7 +1181,7 @@ section#contact {
         margin-top: 0;
         color: #bec6ec; }
     section#contact .contactDetails .contactForm {
-      padding: 4rem 4rem 0; }
+      padding: 3.5rem 4rem 2rem; }
       section#contact .contactDetails .contactForm h6 {
         color: #000;
         margin-bottom: 3rem; }
@@ -1187,7 +1205,7 @@ section#contact {
         padding: 20px 0 10px;
         border-bottom: solid 1px #0366d6;
         background: -webkit-gradient(linear, left top, left bottom, color-stop(96%, rgba(255, 255, 255, 0)), color-stop(4%, #0366d6));
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #8c8f91 4%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #0366d6 4%);
         background-position: -1000px 0;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -1270,7 +1288,7 @@ section#contact {
       section#contact .contactDetails .contactForm input[type="email"] {
         background: -webkit-gradient(linear, left top, left bottom, color-stop(96%, rgba(255, 255, 255, 0)), color-stop(4%, #0366d6));
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #0366d6 4%);
-        background-position: -400px 0;
+        background-position: -800px 0;
         background-repeat: no-repeat;
         -webkit-transition: border-bottom 0.3s ease, background 0.3s ease;
         transition: border-bottom 0.3s ease, background 0.3s ease; }
@@ -1279,8 +1297,7 @@ section#contact {
           visibility: hidden;
           font-family: 'roboto', sans-serif;
           font-size: 0.6em;
-          width: 400px;
-          margin-left: 25px;
+          width: 100%;
           margin-top: -5px;
           color: white;
           -webkit-transition: color 0.3s ease-in-out;
@@ -1331,13 +1348,15 @@ footer {
     padding: 0 0 0 20px;
     margin: 1.5rem 0 0 0; }
     footer .rightCandidate ul li {
-      list-style-type: disc;
+      list-style-type: square;
       padding: 0.3rem 0; }
       footer .rightCandidate ul li a {
         color: #484848;
         font-size: 14px; }
         footer .rightCandidate ul li a:hover {
           color: #0366d6; }
+  footer .rightCandidate p {
+    font-size: 14px; }
 
 @-moz-keyframes myfirst {
   0% {
@@ -1492,15 +1511,230 @@ footer {
   footer .f_size_18 {
     font-size: 18px; }
 
-@media (min-width: 1200px) {
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
   .container {
-    max-width: 1170px; } }
-
-@media (min-width: 961px) {
+    max-width: 1170px; }
   .site-logo {
     padding-top: 20px;
     padding-right: 0px;
     padding-bottom: 20px;
     padding-left: 0px; }
-  .site-logo img {
-    max-width: 165px; } }
+    .site-logo img {
+      max-width: 165px;
+      top: 4px;
+      position: relative; } }
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  header#mobile-navbar {
+    width: 100%;
+    background: white;
+    height: 6.5vh;
+    z-index: 1;
+    box-shadow: 0px 5px 20px -15px #575757;
+    position: fixed;
+    top: -65px;
+    transition: top 0.3s; }
+    header#mobile-navbar .button_container {
+      position: relative;
+      float: right;
+      top: 15px;
+      right: 0;
+      width: 30px;
+      cursor: pointer;
+      z-index: 100;
+      transition: opacity .25s ease; }
+      header#mobile-navbar .button_container:hover {
+        opacity: .7; }
+      header#mobile-navbar .button_container.active {
+        position: fixed;
+        right: 15px; }
+        header#mobile-navbar .button_container.active .top {
+          transform: translateY(11px) translateX(0) rotate(45deg);
+          background: #fff; }
+        header#mobile-navbar .button_container.active .middle {
+          opacity: 0;
+          background: #fff; }
+        header#mobile-navbar .button_container.active .bottom {
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+          top: 22px;
+          background: #fff; }
+      header#mobile-navbar .button_container span {
+        background: #000;
+        border: none;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .35s ease;
+        cursor: pointer; }
+        header#mobile-navbar .button_container span:nth-of-type(2) {
+          top: 9px; }
+        header#mobile-navbar .button_container span:nth-of-type(3) {
+          top: 18px; }
+    header#mobile-navbar .overlay {
+      position: fixed;
+      background: #000;
+      top: 0;
+      z-index: 1;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background-color: rgba(0, 0, 0, 0.8);
+      visibility: hidden;
+      transition: background-color .35s, visibility .35s, height .35s;
+      overflow: hidden; }
+      header#mobile-navbar .overlay.open {
+        background-color: rgba(0, 0, 0, 0.8);
+        visibility: visible;
+        height: 100%; }
+        header#mobile-navbar .overlay.open li {
+          animation: fadeInRight .5s ease forwards;
+          animation-delay: .35s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(2) {
+            animation-delay: .4s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(3) {
+            animation-delay: .45s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(4) {
+            animation-delay: .50s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(5) {
+            animation-delay: .55s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(6) {
+            animation-delay: .60s; }
+          header#mobile-navbar .overlay.open li:nth-of-type(7) {
+            animation-delay: .65s; }
+      header#mobile-navbar .overlay nav {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center; }
+      header#mobile-navbar .overlay ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 100%; }
+        header#mobile-navbar .overlay ul li {
+          display: block;
+          height: 5%;
+          height: calc(100% / 10);
+          min-height: 50px;
+          position: relative;
+          opacity: 0; }
+          header#mobile-navbar .overlay ul li a {
+            display: block;
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden; }
+            header#mobile-navbar .overlay ul li a:hover:after, header#mobile-navbar .overlay ul li a:focus:after, header#mobile-navbar .overlay ul li a:active:after {
+              width: 100%; }
+            header#mobile-navbar .overlay ul li a:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 0%;
+              transform: translateX(-50%);
+              height: 3px;
+              background: #0366d6;
+              transition: .35s; }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } }
+  section#portfolio {
+    padding: 4rem 0; }
+    section#portfolio .portfolioItems {
+      position: relative;
+      z-index: 0; }
+  section#hero .main-banner {
+    height: 72vh; }
+    section#hero .main-banner .my-intro {
+      margin-top: 6rem; }
+      section#hero .main-banner .my-intro h4 {
+        font-size: 1.2rem; }
+  h1 {
+    font-size: 2.5rem; }
+  h2 {
+    font-size: 28px; }
+  section#contact {
+    padding: 4rem 0 0; }
+    section#contact .contactDetails .contactInfo {
+      padding: 2rem 1rem 0rem; }
+      section#contact .contactDetails .contactInfo i {
+        font-size: 1.8rem; }
+      section#contact .contactDetails .contactInfo p {
+        font-size: 0.9rem; }
+    section#contact .contactDetails .contactForm {
+      padding: 4rem 2rem 4rem; }
+      section#contact .contactDetails .contactForm input {
+        padding-top: 2rem; }
+  section#aboutMe {
+    padding: 3rem 0; }
+    section#aboutMe .about-info {
+      padding: 4rem 2rem 0;
+      text-align: center; }
+      section#aboutMe .about-info p {
+        font-size: 0.8rem;
+        line-height: 1.5rem; }
+    section#aboutMe .my-portrait {
+      padding: 2rem 0 0 0; }
+  section#testimonial .carousel-indicators {
+    z-index: 0; }
+  section#skillsContainer i {
+    font-size: 2rem; }
+  section#skillsContainer .mySkills {
+    padding: 3rem 0 0; }
+    section#skillsContainer .mySkills .serviceContainer {
+      padding-right: 15px; }
+      section#skillsContainer .mySkills .serviceContainer h5 {
+        font-size: 1rem; }
+      section#skillsContainer .mySkills .serviceContainer span {
+        font-size: 14px; }
+  footer {
+    margin: 0; }
+    footer .rightCandidate {
+      padding-right: 0; }
+      footer .rightCandidate p {
+        font-size: 12px;
+        line-height: 1.6rem; }
+    footer h3 {
+      font-size: 1.1rem; }
+    footer .rightCandidate ul {
+      padding: 0; }
+      footer .rightCandidate ul li {
+        list-style-type: none; }
+        footer .rightCandidate ul li a {
+          font-size: 12px; } }
