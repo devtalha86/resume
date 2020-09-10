@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         
-        <link rel="stylesheet" href="css/garbadge.css">
+        
 
     </head>
 
@@ -62,22 +62,23 @@
                     
                     <div class="col-6">
                         <div class="button_container" id="mobileMenu--toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
-                        <div class="overlay" id="overlay">
-                            <nav class="overlay-menu">
-                                <ul>
-                                    <li><a href="#hero">Home</a></li>
-                                    <li><a href="#aboutMe">About Me</a></li>
-                                    <li><a href="#skillsContainer">Skills</a></li>
-                                    
-                                    <li><a href="#portfolio">Portfolio</a></li>
-                                    <li><a href="#testimonial">Testimonial</a></li>
-                                    <li><a href="#contact">Contact</a></li>
-                                    <li><a href="#why">Why Me?</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                        
                     </div>
                 </div>
+            </div>
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#skillsContainer">Skills</a></li>
+                        
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#why">Why Me?</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
@@ -93,12 +94,12 @@
                                     <div class="col-12 col-lg-5 d-none d-lg-block d-sm-none"></div>
                                     
                                     <div class="col-12 col-lg-7 p-0">
-                                        <div class="my-intro">
+                                        <div class="my-intro px-lg-5 px-4">
                                             <h4>An awesome Portfolio</h4>
                                             <h1>Build for <br> professionals</h1>
                                             <p>A must have portfolio template designed for professionals by professionals. Clean and latest design with simple but elegant transition effects. </p>
-                                            <div class="button" id="button-3">
-                                                <div id="circle"></div>
+                                            <div class="button button-3">
+                                                <div class="circle"></div>
                                                 <a href="#">Get it now</a>
                                             </div>                                            
                                         </div>
@@ -487,26 +488,26 @@
                             <div class="contactForm">
                                 <h6>NEED HELP WITH YOUR PROJECT?</h6>
                                 
-                                <form>
+                                <form method="post" action="send_mail.php">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <input placeholder="Name" type="text"  value="" required>
+                                            <input placeholder="Name" type="text"  value="" name="first_name" required>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <input placeholder="Email address" type="email" onblur="this.setAttribute('value', this.value);" value="" required>
+                                            <input placeholder="Email address" type="email" onblur="this.setAttribute('value', this.value);" value="" name="email_address" required>
                                             <span class="validation-text">Please enter a valid email address.</span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <textarea placeholder="Message" rows="1" required></textarea>
+                                            <textarea placeholder="Message" rows="1" name="comments" maxlength="500" required></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 text-center text-lg-left">
-                                            <div class="button" id="button-3">
-                                                <div id="circle"></div>
-                                                <a href="#">Send Message</a>
+                                            <div class="button button-3">
+                                                <div class="circle"></div>
+                                                <button>Send Message</button>
                                             </div>
                                         </div>
                                     </div>
@@ -570,7 +571,7 @@
 
 
 <!-- Portfolio Project Details Modal -->
-<div class="modal fade" id="projectDetails--1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="projectDetails--1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
           
@@ -605,10 +606,10 @@
                     <span class="label tag">jQuery</span>
                 </div>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-                <div class="button" id="button-3">
-                    <div id="circle"></div>
-                    <i class="fa fa-link"></i>
-                    <a href="http://www.google.com" target="_blank">Visit Live Site</a>
+                <div class="button button-3">
+                    <div class="circle"></div>
+                    
+                    <a href="http://www.google.com"><i class="fa fa-link"></i>Visit Live Site</a>
                 </div>
             </div>
             

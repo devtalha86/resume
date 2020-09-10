@@ -20,7 +20,7 @@ $(document).ready(function () {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("navbar").style.top = "0";
         } else {
-            document.getElementById("navbar").style.top = "-95px";
+            // document.getElementById("navbar").style.top = "-95px";
             // document.getElementById("mobile-navbar").style.top = "-65px";
         }
 
